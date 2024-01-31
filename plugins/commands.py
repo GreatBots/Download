@@ -1,5 +1,5 @@
 from pyrogram import filters, Client as Mbot
-from pyrogram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 import bs4, requests
 from bot import DUMP_GROUP
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -32,7 +32,7 @@ async def start(Mbot, message):
      
 @Mbot.on_message(filters.command("help") & filters.incoming)
 async def help(Mbot, message):
-          await message.reply("This is user friendly bot so you can simple send your Instagram reel and post links here:) \n eg: `https://www.instagram.com/reel/CZqWDGODoov/?igshid=MzRlODBiNWFlZA==`\n `post:` `https://www.instagram.com/reel/CuCTtORJbDj/?igshid=MzRlODBiNWFlZA==`")
+          await message.reply("**⁉️ Need Help**\n\nThis is user friendly bot so you can simple send your Social Media links here:) \n\n **eg:** `https://www.instagram.com/reel/CuCTtORJbDj/?igshid=MzRlODBiNWFlZA==`")
 @Mbot.on_message(filters.command("donate") & filters.command("Donate") & filters.incoming )
 async def donate(_, message):
-       await message.reply_text(f"Donate 🍪 **$** https://www.buymeacoffee.com/Masterolic \n**UPI**`arunrnadh2002@okhdfcbank` \nhttps://www.paypal.me/MasterolicOfficial")
+       await message.reply_text(f"**Thanks For Choosing Donate 💰**\n\n**Payment Options:**\n**BuyMeCoffee :** https://www.buymeacoffee.com/ \n**UPI**`not ready yet` \n**Paypal:** https://www.paypal.me/ \n\nSent a screenshot of payment to @anocy for getting rewards")
