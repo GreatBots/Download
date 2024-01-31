@@ -54,15 +54,15 @@ async def link_handler(Mbot, message):
                       return await message.reply("oops something went wrong")
                try:
                    if ddinsta:
-                      dump_file=await message.reply_video(content_value,caption="Thank you for using - @InstaReelsdownbot")
+                      dump_file=await message.reply_video(content_value,caption="**❤️ Thank you for using - @Downloader_ItBot**")
                    else:
-                       dump_file=await message.reply_video(content_value, caption="Thank you for using - @InstaReelsdownbot")
+                       dump_file=await message.reply_video(content_value, caption="**❤️ Thank you for using - @Downloader_ItBot**")
                except:
                    downfile=f"{os.getcwd()}/{random.randint(1,10000000)}"
                    with open(downfile,'wb') as x:
                        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
                        x.write(requests.get(content_value,headers=headers).content)
-                   dump_file=await message.reply_video(downfile,caption="Thank you for using - @InstaReelsdownbot") 
+                   dump_file=await message.reply_video(downfile,caption="**❤️ Thank you for using - @Downloader_ItBot**") 
             elif "/p/" in url:
                   meta_tag = requests.post("https://saveig.app/api/ajaxSearch", data={"q": link, "t": "media", "lang": "en"}, headers=headers)
                   if meta_tag.ok:
