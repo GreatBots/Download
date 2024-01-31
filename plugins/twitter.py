@@ -31,7 +31,7 @@ async def twitter_handler(Mbot, message):
                   meta_tag = soup.find("meta", attrs={"property": "og:image"})
               content_value  = meta_tag['content']
               try:
-                  dump_file = await message.reply_video(content_value,caption="Thank you for using - @InstaReelsdownbot")
+                  dump_file = await message.reply_video(content_value,caption="**❤️ Thank you for using - @Downloader_ItBot**")
               except Exception as e:
                   print(e)
                   try:
