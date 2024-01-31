@@ -1,4 +1,5 @@
 from pyrogram import filters, Client as Mbot
+from pyrogram import InlineKeyboardButton, InlineKeyboardMarkup
 import bs4, requests
 from bot import DUMP_GROUP
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -19,8 +20,16 @@ async def monitor(Mbot, message):
           
 @Mbot.on_message(filters.command("start") & filters.incoming)
 async def start(Mbot, message):
-          await message.reply(f"**👋🏻 Hello {message.from_user.mention()}**,\n\nI am A Telegram Bot Which Can Download From Multiple Social Media.Send Me Any **Instagram ,TikTok, Twitter, Facebook , YouTube(Music and shorts)** Links. ")
-          
+    keyboard = [
+        [InlineKeyboardButton("📣 Updates Channel", url="https://t.me/better_botz")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    
+    await message.reply(
+        f"**👋🏻 Hello {message.from_user.mention()}**,\n\nI am a Telegram Bot which can download from multiple social media. Send me any **Instagram, TikTok, Twitter, Facebook, YouTube (Music and shorts)** links.",
+        reply_markup=reply_markup
+    )
+     
 @Mbot.on_message(filters.command("help") & filters.incoming)
 async def help(Mbot, message):
           await message.reply("This is user friendly bot so you can simple send your Instagram reel and post links here:) \n eg: `https://www.instagram.com/reel/CZqWDGODoov/?igshid=MzRlODBiNWFlZA==`\n `post:` `https://www.instagram.com/reel/CuCTtORJbDj/?igshid=MzRlODBiNWFlZA==`")
