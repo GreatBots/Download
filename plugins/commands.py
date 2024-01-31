@@ -36,7 +36,7 @@ async def help(Mbot, message):
         disable_web_page_preview=True  # Add this parameter to disable web page preview
     )
      
-@Mbot.on_message(filters.command("donate", "Donate") & filters.incoming)
+@Mbot.on_message(filters.command(["donate", "Donate"]) & filters.incoming)
 async def donate(_, message):
     await message.reply_text(
         f"**Thanks For Choosing Donate 💰**\n\n**💳 Payment Options:**\n**☕️ BuyMeCoffee :** https://www.buymeacoffee.com/ \n**🖇 UPI**`not ready yet` \n**🅿️ Paypal:** https://www.paypal.me/ \n\n📸 Sent a screenshot of payment to @anocy for getting rewards",
