@@ -1,5 +1,5 @@
 from pyrogram import filters, Client as Mbot
-from pyrogram import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import bs4, requests
 from bot import DUMP_GROUP
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -20,14 +20,13 @@ async def monitor(Mbot, message):
           
 @Mbot.on_message(filters.command("start") & filters.incoming)
 async def start(Mbot, message):
-    keyboard = [
-        [InlineKeyboardButton("📣 Updates Channel", url="https://t.me/better_botz")]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
-    await message.reply(
+    keyboard = InlineKeyboardMarkup(
+        [[InlineKeyboardButton("📣 Updates Channel", url="https://t.me/better_botz")]]
+    )
+
+    await message.reply_text(
         f"**👋🏻 Hello {message.from_user.mention()}**,\n\nI am a Telegram Bot which can download from multiple social media. Send me any **Instagram, TikTok, Twitter, Facebook, YouTube (Music and shorts)** links.",
-        reply_markup=reply_markup
+        reply_markup=keyboard
     )
      
 @Mbot.on_message(filters.command("help") & filters.incoming)
