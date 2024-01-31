@@ -23,9 +23,9 @@ async def link_handler(Mbot, message):
         url= link.replace("instagram.com","ddinstagram.com")
         url=url.replace("==","%3D%3D")
         if url.endswith("="):
-           dump_file=await message.reply_video(url[:-1],caption="Thank you for using - @InstaReelsdownbot")
+           dump_file=await message.reply_video(url[:-1],caption="**❤️ Thank you for using - @Downloader_ItBot**")
         else:
-            dump_file=await message.reply_video(url,caption="Thank you for using - @InstaReelsdownbot")
+            dump_file=await message.reply_video(url,caption="**❤️ Thank you for using - @Downloader_ItBot**")
         if 'dump_file' in locals():
            await dump_file.forward(DUMP_GROUP)
         await m.delete()
@@ -75,7 +75,7 @@ async def link_handler(Mbot, message):
                      com=await message.reply_text(meta[i])
                      await asyncio.sleep(1)
                      try:
-                        dump_file=await message.reply_video(com.text,caption="Thank you for using - @InstaReelsdownbot")
+                        dump_file=await message.reply_video(com.text,caption="**❤️ Thank you for using - @Downloader_ItBot**")
                         await com.delete()
                      except:
                          pass 
@@ -87,7 +87,7 @@ async def link_handler(Mbot, message):
                   else:
                       return await message.reply("Oops something went wrong")
                   try:
-                     dump_file=await message.reply_video(meta[0], caption="Thank you for using - @InstaReelsdownbot")
+                     dump_file=await message.reply_video(meta[0], caption="**❤️ Thank you for using - @Downloader_ItBot**")
                   except:
                       com=await message.reply(meta[0])
                       await asyncio.sleep(1)
