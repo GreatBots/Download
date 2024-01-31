@@ -31,7 +31,14 @@ async def start(Mbot, message):
      
 @Mbot.on_message(filters.command("help") & filters.incoming)
 async def help(Mbot, message):
-          await message.reply("**⁉️ Need Help**\n\nThis is user friendly bot so you can simple send your Social Media links here:) \n\n **eg:** `https://www.instagram.com/reel/CuCTtORJbDj/?igshid=MzRlODBiNWFlZA==`")
-@Mbot.on_message(filters.command("donate") & filters.command("Donate") & filters.incoming )
+    await message.reply(
+        "**⁉️ Need Help**\n\nThis is a user-friendly bot, so you can simply send your Social Media links here:)\n\n **eg:** `https://www.instagram.com/reel/CuCTtORJbDj/?igshid=MzRlODBiNWFlZA==`",
+        disable_web_page_preview=True  # Add this parameter to disable web page preview
+    )
+     
+@Mbot.on_message(filters.command("donate", "Donate") & filters.incoming)
 async def donate(_, message):
-       await message.reply_text(f"**Thanks For Choosing Donate 💰**\n\n**💳 Payment Options:**\n**☕️ BuyMeCoffee :** https://www.buymeacoffee.com/ \n**🖇 UPI**`not ready yet` \n**🅿️ Paypal:** https://www.paypal.me/ \n\n📸 Sent a screenshot of payment to @anocy for getting rewards")
+    await message.reply_text(
+        f"**Thanks For Choosing Donate 💰**\n\n**💳 Payment Options:**\n**☕️ BuyMeCoffee :** https://www.buymeacoffee.com/ \n**🖇 UPI**`not ready yet` \n**🅿️ Paypal:** https://www.paypal.me/ \n\n📸 Sent a screenshot of payment to @anocy for getting rewards",
+        disable_web_page_preview=True  # Add this parameter to disable web page preview
+    )
