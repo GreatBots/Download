@@ -1,5 +1,5 @@
 from pyrogram import filters, Client as Mbot
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import InlineKeyboardButton, InlineKeyboardMarkup
 import bs4, requests
 from bot import DUMP_GROUP
 from apscheduler.schedulers.background import BackgroundScheduler
