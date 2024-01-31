@@ -19,7 +19,7 @@ async def monitor(Mbot, message):
           
 @Mbot.on_message(filters.command("start") & filters.incoming)
 async def start(Mbot, message):
-          await message.reply(f"Hello 👋👋 {message.from_user.mention()}\n I am A Simple Telegram Bot Can Download From Multiple Social Media Currently Support Instagram ,TikTok, Twitter, Facebook , YouTube(Music and shorts) And So On....! ")
+          await message.reply(f"**👋🏻 Hello {message.from_user.mention()}**,\n\nI am A Telegram Bot Which Can Download From Multiple Social Media.Send Me Any **Instagram ,TikTok, Twitter, Facebook , YouTube(Music and shorts)** Links. ")
           
 @Mbot.on_message(filters.command("help") & filters.incoming)
 async def help(Mbot, message):
