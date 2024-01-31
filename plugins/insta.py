@@ -92,7 +92,7 @@ async def link_handler(Mbot, message):
                       com=await message.reply(meta[0])
                       await asyncio.sleep(1)
                       try:
-                          dump_file=await message.reply_video(com.text,caption="Thank you for using - @InstaReelsdownbot")
+                          dump_file=await message.reply_video(com.text,caption="**❤️ Thank you for using - @Downloader_ItBot**)
                           await com.delete()
                       except:
                           pass
@@ -106,7 +106,7 @@ async def link_handler(Mbot, message):
                await Mbot.send_message(LOG_GROUP, traceback.format_exc())
           #     await message.reply(tracemsg)
             ##optinal 
-            await message.reply(f"400: Sorry, Unable To Find It  try another or report it  to @masterolic or support chat @spotify_supportbot 🤖  ")
+            await message.reply(f"**Sorry,** Unable To Find It  try another or report it  to @anocy")
 
         finally:
             if 'dump_file' in locals():
@@ -115,4 +115,4 @@ async def link_handler(Mbot, message):
             await m.delete()
             if 'downfile' in locals():
                 os.remove(downfile)
-            await message.reply("Check out @spotify_downloa_bot(music)  @spotifynewss(Channel) \n Please Support Us By /donate To Maintain This Project")
+            await message.reply("**Check Out @Better_Botz For Updates**")
