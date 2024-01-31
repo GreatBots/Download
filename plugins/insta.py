@@ -92,7 +92,7 @@ async def link_handler(Mbot, message):
                       com=await message.reply(meta[0])
                       await asyncio.sleep(1)
                       try:
-                          dump_file=await message.reply_video(com.text,caption="**❤️ Thank you for using - @Downloader_ItBot**)
+                          dump_file=await message.reply_video(com.text,caption="**❤️ Thank you for using - @Downloader_ItBot**")
                           await com.delete()
                       except:
                           pass
