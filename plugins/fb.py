@@ -7,7 +7,7 @@ from bot import LOG_GROUP,DUMP_GROUP
 async def link_handler(Mbot, message):
     link = message.matches[0].group(0)
     try:
-       m = await message.reply_text("⏳")
+       m = await message.reply_text("⏳ Processing Please Wait")
        get_api=requests.get(f"https://yasirapi.eu.org/fbdl?link={link}").json()
        if get_api['success'] == "false":
           return await message.reply("Invalid TikTok video url. Please try again :)")
