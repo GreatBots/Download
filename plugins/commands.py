@@ -29,21 +29,6 @@ async def start(Mbot, message):
         reply_markup=keyboard
     )
 
-@Mbot.on_message(filters.private & ~filters.channel)
-def handle_private_messagde(Mbot, message):
-    user_id = message.from_user.id
-    if client.get_chat_member(-1002092798390, user_id).status == "member":
-        # User is a member, bot works normally
-        message.reply_text("Welcome to the bot! You can now use its features.")
-    else:
-        # User is not in the channel, send a message to join
-        message.reply_text(
-            "Join My Updates Channel To Use Me",
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Join", url="https://t.me/better_botz")]]
-            ),
-        )
-
           
 @Mbot.on_message(filters.command("help") & filters.incoming)
 async def help(Mbot, message):
