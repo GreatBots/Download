@@ -43,3 +43,24 @@ async def donate(_, message):
         f"**Thanks For Choosing Donate 💰**\n\n**💳 Payment Options:**\n**☕️ BuyMeCoffee :** https://www.buymeacoffee.com/ \n**🖇 UPI**`not ready yet` \n**🅿️ Paypal:** https://www.paypal.me/ \n\n📸 Sent a screenshot of payment to @anocy for getting rewards",
         disable_web_page_preview=True  # Add this parameter to disable web page preview
     )
+
+@Mbot.on_message(filters.command("unknown_command") & filters.incoming)
+async def unknown_command(_, message):
+    await message.reply_text("❓ Unknown command. Type /help for assistance.")
+
+
+@Mbot.on_message(filters.regex(r'https://www\.instagram\.com/.*') & filters.incoming)
+async def handle_instagram_link(_, message):
+    await message.reply_text("📸 Processing Instagram link...")
+    # Add your Instagram link processing logic here
+
+@Mbot.on_message(filters.regex(r'https://www\.tiktok\.com/.*') & filters.incoming)
+async def handle_tiktok_link(_, message):
+    await message.reply_text("🎵 Processing TikTok link...")
+    # Add your TikTok link processing logic here
+
+@Mbot.on_message(filters.regex(r'https://www\.youtube\.com/.*') & filters.incoming)
+async def handle_youtube_link(_, message):
+    await message.reply_text("🎥 Processing YouTube link...")
+    # Add your YouTube link processing logic here
+
