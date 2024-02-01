@@ -11,7 +11,7 @@ async def twitter_handler(Mbot, message):
          link=link.replace("x.com","fxtwitter.com")
       elif "twitter.com" in link:
          link = link.replace("twitter.com","fxtwitter.com")
-      m=await message.reply_sticker("CAACAgIAAxkBATWhF2Qz1Y-FKIKqlw88oYgN8N82FtC8AAJnAAPb234AAT3fFO9hR5GfHgQ")
+      m=await message.reply_sticker("CAACAgIAAxkBAAKA6mW7Ekd20ceauBWYNeAO_ROx32obAAK8DAAChygwSe03kZlYIWgENAQ")
       try:
           dump_file = await message.reply_video(link,caption="**❤️ Thank you for using - @Downloader_ItBot**")
       except Exception as e:
